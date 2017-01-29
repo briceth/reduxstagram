@@ -1,15 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
 
-import App from './components/app';
-import reducers from './reducers';
 
-const createStoreWithMiddleware = applyMiddleware()(createStore);
+import Main from './components/Main';
+import PhotoGrid from './components/PhotoGrid';
+import Single from './components/Single';
+
+import { Router, Route, IndexRoute, browserHistory }from 'react-router'
+
+const router = (
+  <Router history={browserHistory}>
+    <Route path='/' component={Main}>
+      <IndexRoute component={PhotoGrid}></IndexRoute>
+      <Route path='/view/:postId' component={Single}></Route>
+    </Route>
+  </Router>
+)
 
 ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
-    <App />
-  </Provider>
+  router
   , document.querySelector('.container'));
