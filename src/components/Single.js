@@ -19,7 +19,7 @@ export default class Single extends Component {
       <div>
         <div className='single-photo'>
           <Photo index={index} photo={photo} {...this.props} />
-          <Comments postComments={postComments}/>
+          <Comments postComments={postComments} {...this.props}/>
         </div>
       </div>
     )

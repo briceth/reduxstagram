@@ -7,6 +7,7 @@ export function increment(index) {
 }
 //add comment
 export function addComment(postId, author, comment) {
+  console.log('dispatch add comment')
   return {
     type: 'ADD_COMMENT',
     postId,
@@ -16,10 +17,11 @@ export function addComment(postId, author, comment) {
 }
 
 //remove comment
-export function removeComment(postId, id) {
+export function removeComment(postId, index) {
+  console.log('dispatch removing comment')
   return {
     type: 'REMOVE_COMMENT',
     postId,
-    id
+    index
   }
 }
