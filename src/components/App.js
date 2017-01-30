@@ -5,7 +5,8 @@ import Main from './Main'
 
 function mapStateToProps(state) {
   return {
-    PhotoGrid: state.PhotoGrid
+    PhotoGrid: state.PhotoGrid,
+    Comments: state.Comments
   }
 }
 

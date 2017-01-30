@@ -6,11 +6,13 @@ import  { browserHistory } from 'react-router'
 import rootReducer from './reducers/index'
 
 import PhotoGrid from './data/courses'
+import Comments from './data/comments'
 
 
 //create an object for the default data
 const defaultState = {
   PhotoGrid,
+  Comments
 }
 
 const store = createStore(rootReducer, defaultState)

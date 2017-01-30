@@ -3,6 +3,20 @@
 // 2.copy of the current state
 
 export default function PhotoGrid(state = [], action) {
-  console.log(state, action)
-  return state
+  switch(action.type) {
+    case 'INCREMENT_LIKES':
+    //return the updated state
+    const index = action.index
+    //console.log(index)
+    const likes = state[index]
+    //console.log(likes)
+  return [
+    ...state.slice(0, index),
+    {...state[index], likes: state[index].likes + 1 },
+    ...state.slice(index + 1)
+  ]
+    // if we dont use this case we want to return the current state
+    default:
+      return state
+  }
 }
