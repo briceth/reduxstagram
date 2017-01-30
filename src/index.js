@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 
 
 import App from './components/App';
 import PhotoGrid from './components/PhotoGrid';
 import Single from './components/Single';
 
-import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 
 import { Provider } from 'react-redux'
+
 import store, { history } from './store'
 
 const router = (

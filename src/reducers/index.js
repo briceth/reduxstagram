@@ -1,4 +1,6 @@
 import { combineReducers } from 'redux';
+
+//why does that??
 import { routerReducer } from 'react-router-redux';
 
 import PhotoGrid from './PhotoGridReducer'
