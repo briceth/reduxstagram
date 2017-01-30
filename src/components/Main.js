@@ -8,12 +8,10 @@ export default class Main extends Component {
   render() {
     return (
       <div>
-        <div className='col-xs-12 col-sm-6 col-sm-offset-4'>
           <Link to='/'>REDUXSTAGRAM</Link>
 
 
           {React.cloneElement(this.props.children, this.props)}
-        </div>
       </div>
     )
   }

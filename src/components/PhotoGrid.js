@@ -9,7 +9,9 @@ export default class PhotoGrid extends Component {
       <div>
         <div className='photo-grid'>
             {this.props.PhotoGrid.map((photo, index) =>
-              <Photo {...this.props} key={index} index={index} photo={photo}/>
+              <div className='col-xs-12 col-sm-4'>
+                <Photo {...this.props} key={index} index={index} photo={photo}/>
+              </div>
             )}
         </div>
       </div>

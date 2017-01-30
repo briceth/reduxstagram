@@ -1,0 +1,27 @@
+.link-card {
+  margin-top: 5%;
+}
+.card {
+  height: 250px;
+  width: 325px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  color: white;
+  position: relative;
+}
+.card p {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.card button {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+.background-img {
+  position: absolute;
+  background-size: cover !important;
+  width: 325px;
+  height: 175px;
+}
